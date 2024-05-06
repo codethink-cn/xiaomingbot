@@ -1,0 +1,62 @@
+plugins{
+    id 'java'
+    id 'java-library'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group 'cn.chuanwise.xiaoming'
+version '4.9-All-Last'
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+
+repositories {
+    mavenCentral()
+    google()
+    maven{
+        name = 'Sonatype'
+        url = 'https://s01.oss.sonatype.org/content/repositories/snapshots'
+    }
+    mavenLocal()
+}
+
+dependencies {
+
+    implementation 'org.jline:jline-parent:3.20.0'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.14.2'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.14.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+    implementation 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+    implementation 'org.fusesource.jansi:jansi:2.4.0'
+    implementation 'org.apache.commons:commons-collections4:4.4'
+    implementation 'org.slf4j:slf4j-log4j12:2.0.7'
+    implementation "top.mrxiaom:overflow-core-all:2.16.0-febc5da-SNAPSHOT"
+    implementation files('libs/WiseToolkit-4.0.1-SNAPSHOT.jar')//椽子工具库
+    implementation 'net.mamoe:mirai-core-api-jvm:2.16.0'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+shadowJar {
+    manifest {
+        attributes(
+                'Build-JDK-Version': '17',
+                'Build-Version': '4.9.10-SNAPSHOT',
+                'group': 'cn.chuanwise.xiaoming',
+                'build-by': 'qfys521'
+        )
+    }
+    // 将 build.gradle 打入到 jar 中, 方便查看依赖包版本
+    from("./") {
+        include 'build.gradle'
+    }
+}
