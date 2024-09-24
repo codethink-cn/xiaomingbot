@@ -16,11 +16,7 @@ compileJava {
 repositories {
     mavenCentral()
     google()
-    maven{
-        name = 'Sonatype'
-        url = 'https://s01.oss.sonatype.org/content/repositories/snapshots'
-    }
-    mavenLocal()
+    maven {}.url = "https://s01.oss.sonatype.org/content/repositories/snapshots"
 }
 
 dependencies {
@@ -34,7 +30,7 @@ dependencies {
     implementation 'org.fusesource.jansi:jansi:2.4.0'
     implementation 'org.apache.commons:commons-collections4:4.4'
     implementation 'org.slf4j:slf4j-log4j12:2.0.7'
-    implementation "top.mrxiaom:overflow-core-all:2.16.0-febc5da-SNAPSHOT"
+    implementation "top.mrxiaom.mirai:overflow-core:0.9.9.513-b165a7a-SNAPSHOT"
     implementation files('libs/WiseToolkit-4.0.1-SNAPSHOT.jar')//椽子工具库
     implementation 'net.mamoe:mirai-core-api-jvm:2.16.0'
     testImplementation platform('org.junit:junit-bom:5.9.1')
