@@ -7,6 +7,7 @@
 > `QQ` 群：[1028959718](https://jq.qq.com/?_wv=1027&k=sjBXo6xh)<br>
 > 项目发起人：[`椽子`](https://github.com/Chuanwise)
 
+> **注意: 本项目已于2024年月停止维护**
 
 ## 特性
 
@@ -18,12 +19,13 @@
 
 **一切开发用于交流学习，请勿用于违规行为**
 
-1. 本框架基于 [Mirai](https://github.com/mamoe/mirai) 开发，这是一个在全平台下运行，提供 `QQ Android` 协议支持的高效率机器人库。
-1. 小明不会通过任何方式强制收取费用，或对使用者提出物质条件。
-1. 小明由整个开源社区维护，并不是属于某个个体的作品，所有贡献者都享有其作品的著作权。
-1. 你使用小明框架机器人所做的包括但不限于开发、交互等行为，均与小明框架本身和作者无关。由此产生的一切后果，均由你承担。
-1. 鉴于项目的特殊性，我们可能在**任何时间**停止更新或删除项目。
+1. 本框架基于 [Mirai](https://github.com/mamoe/mirai) 开发，这是一个在全平台下运行，提供 `onebot v11` 协议支持的高效率机器人库。
+2. 小明不会通过任何方式强制收取费用，或对使用者提出物质条件。
+3. 小明由整个开源社区维护，并不是属于某个个体的作品，所有贡献者都享有其作品的著作权。
+4. 你使用小明框架机器人所做的包括但不限于开发、交互等行为，均与小明框架本身和作者无关。由此产生的一切后果，均由你承担。
+5. 鉴于项目的特殊性，我们可能在**任何时间**停止更新或删除项目。
 
+*以下内容已过时*
 ## 文档
 
 小明尚处在非常初级的发展阶段，欢迎你加入我们和我们一起助力小明的发展。
@@ -40,7 +42,7 @@
 ## 鸣谢
 
 1. [ThymeChen](https://github.com/ThymeChen)：为小明编写了很多有趣的插件。
-1. [HornCopper](https://github.com/HornCopper)：为小明编写了一些 `Python` 插件。
-1. [qfys521](https://www.github.com/qfys521)为旧版小明进行维护保证其可用性。
-1. [ExerciseBook](https://github.com/ExerciseBook)：让我对 `QQ` 机器人产生了兴趣。
-1. [lclbm](https://github.com/lclbm)：让我产生了动手写一个机器人的想法。
+2. [HornCopper](https://github.com/HornCopper)：为小明编写了一些 `Python` 插件。
+3. [qfys521](https://www.github.com/qfys521)：为旧版小明接入[Overflow](https://github.com/MrXiaoM/Overflow)，使其能够以onebotV11的方式得以使用。
+4. [ExerciseBook](https://github.com/ExerciseBook)：让我对 `QQ` 机器人产生了兴趣。
+5. [lclbm](https://github.com/lclbm)：让我产生了动手写一个机器人的想法。
