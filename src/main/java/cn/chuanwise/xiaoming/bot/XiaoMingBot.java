@@ -33,9 +33,9 @@ import java.io.File;
  * @author Chuanwise
  */
 public interface XiaoMingBot extends StatusHolder<XiaoMingBot.Status> {
-    String VERSION = "4.9.10";
+    String VERSION = "4.9.20251228-all-last";
     String SPONSOR = "Chuanwise";
-    String GITHUB = "https://github.com/codethink-cn/elder-xiaoming";
+    String GITHUB = "https://github.com/codethink-cn/xiaomingbot";
     String GROUP = "1028959718";
     String DEVELOPMENT_DOCUMENT = "https://docs.codethink.cn/#";
 

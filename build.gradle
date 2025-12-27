@@ -5,7 +5,7 @@ plugins{
 }
 
 group 'cn.chuanwise.xiaoming'
-version '4.9-All-Last'
+version '4.9.20251228-all-last'
 
 compileJava {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -16,7 +16,9 @@ compileJava {
 repositories {
     mavenCentral()
     google()
-    maven {}.url = "https://s01.oss.sonatype.org/content/repositories/snapshots"
+    maven {
+        url = uri("https://central.sonatype.com/repository/maven-snapshots/")
+    }
 }
 
 dependencies {
@@ -30,7 +32,7 @@ dependencies {
     implementation 'org.fusesource.jansi:jansi:2.4.0'
     implementation 'org.apache.commons:commons-collections4:4.4'
     implementation 'org.slf4j:slf4j-log4j12:2.0.7'
-    implementation "top.mrxiaom.mirai:overflow-core:1.0.3.559-ee3ae2b-SNAPSHOT"
+    implementation "top.mrxiaom.mirai:overflow-core:1.0.8.669-9a9b69f-SNAPSHOT"
     implementation files('libs/WiseToolkit-4.0.1-SNAPSHOT.jar')//椽子工具库
     implementation 'net.mamoe:mirai-core-api-jvm:2.16.0'
     testImplementation platform('org.junit:junit-bom:5.9.1')
@@ -41,12 +43,17 @@ test {
     useJUnitPlatform()
 }
 
+java {
+    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_17
+}
+
 
 shadowJar {
     manifest {
         attributes(
                 'Build-JDK-Version': '17',
-                'Build-Version': '4.9.10-SNAPSHOT',
+                'Build-Version': '4.9.20251228-all-last',
                 'group': 'cn.chuanwise.xiaoming',
                 'build-by': 'qfys521'
         )
